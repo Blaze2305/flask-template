@@ -2,7 +2,7 @@ SOURCE_DIR = src
 SOURCES = $(wildcard *.cpp) $(wildcard src/*/*.cpp)
 BUILD_DIR = bin
 MEMTEST = valgrind
-GXX = g++
+GXX = g++ -std=c++17
 
 
 default: build
