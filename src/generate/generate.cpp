@@ -28,7 +28,7 @@ void generateFiles(std::string projName){
 			"/app.py", "from app import app as application\nif __name__ == \"__main__\":\n\tapplication.run(host='0.0.0.0',debug=True)"
 		},
 		{
-			"/requirements.txt", "Flask\nFlask-Cors"
+			"/requirements.txt", "Flask\nFlask-Cors\ngunicorn"
 		},
 		{
 			"/app/__init__.py", "from flask import Flask\nfrom flask_cors import CORS\napp=Flask(__name__)\nCORS(app)\nfrom app.routes import mainRoutes"
