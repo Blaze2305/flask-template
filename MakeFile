@@ -1,9 +1,9 @@
 SOURCE_DIR = src
 SOURCES = $(wildcard *.cpp) $(wildcard src/*/*.cpp)
 BUILD_DIR = bin
+BUILD_NAME = flaskcreate
 MEMTEST = valgrind
 GXX = g++ -std=c++17
-
 
 default: build
 .PHONY: default
@@ -15,11 +15,11 @@ DETECTED_OS := $(shell sh -c 'uname 2>/dev/null || echo Unknown')
 endif
 
 ifeq ($(DETECTED_OS),Windows)
-BUILD_FILE = app.exe
+BUILD_FILE = ${BUILD_NAME}.exe
 endif
 
 ifeq ($(DETECTED_OS),Linux)
-BUILD_FILE = app.out
+BUILD_FILE = ${BUILD_NAME}.out
 endif
 
 
